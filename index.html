@@ -1,68 +1,35 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#e09f3e">
-  <title>Play Blooket | Join a Game</title>
-  <style>
-    *{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Nunito,"Trebuchet MS",Arial,sans-serif;color:#303030}
-    body{min-height:100vh;background:#e09f3e;overflow:hidden}
-    .checks{position:fixed;inset:0;opacity:.14;background-image:linear-gradient(45deg,#fff 25%,transparent 25%),linear-gradient(-45deg,#fff 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#fff 75%),linear-gradient(-45deg,transparent 75%,#fff 75%);background-size:44px 44px;background-position:0 0,0 22px,22px -22px,-22px 0;pointer-events:none}
-    header{height:64px;position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:0 30px;color:#fff}
-    .brand{font-size:25px;font-weight:1000;color:#fff;text-decoration:none;text-shadow:0 2px 0 #9b5d20}
-    .header-title{font-size:20px;font-weight:900;text-shadow:0 2px 0 #9b5d20}
-    .login{color:#fff;font-weight:800;text-decoration:none}
-    main{position:relative;z-index:1;min-height:calc(100vh - 64px);display:flex;align-items:center;justify-content:center;padding:24px}
-    .panel{width:min(570px,100%);padding:42px 38px 38px;text-align:center;background:#fff;border:5px solid #f3d7a6;border-radius:24px;box-shadow:0 9px 0 #9c6429,0 18px 35px #693d1b44}
-    h1{font-size:clamp(42px,9vw,68px);line-height:1;margin:0 0 34px;color:#e09f3e;font-weight:1000;letter-spacing:-2px;text-shadow:0 3px 0 #f5d6a0}
-    .row{display:flex;gap:10px}
-    input{min-width:0;flex:1;height:64px;border:3px solid #ddd;border-radius:13px;padding:0 18px;font-size:22px;font-weight:800;text-align:center;outline:none}
-    input:focus{border-color:#e09f3e;box-shadow:0 0 0 3px #e09f3e33}
-    button{width:68px;height:64px;border:0;border-radius:13px;background:#9a49aa;color:#fff;font-size:34px;font-weight:900;cursor:pointer;box-shadow:0 5px 0 #693177}
-    button:active{transform:translateY(3px);box-shadow:0 2px 0 #693177}
-    .hint{margin:20px 0 0;color:#777;font-size:14px}
-    .notice{min-height:20px;margin-top:14px;color:#a33;font-weight:700}
-    @media(max-width:480px){header{padding:0 16px}.header-title{font-size:16px}.panel{padding:34px 20px}.row{gap:7px}input{font-size:19px}button{width:58px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e09f3e">
+<title>Play Blooket | Blooket</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;min-height:100%;font-family:Arial,Helvetica,sans-serif}body{overflow:hidden;background:#d9ad1c}
+.topbar{height:31px;background:#9632b1;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 12px;font-weight:700;font-size:20px;position:relative;z-index:3;box-shadow:0 2px 2px #0002}
+.brand{font-size:25px;font-weight:900;letter-spacing:-1px}.join{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap}.login{font-size:16px;text-decoration:underline;color:#fff}
+.scene{height:calc(100vh - 31px);position:relative;overflow:hidden;background-color:#dfb21e;background-image:repeating-linear-gradient(15deg,transparent 0 39px,#edca4b55 40px 80px),repeating-linear-gradient(105deg,transparent 0 39px,#edca4b55 40px 80px)}
+.scene:before{content:"";position:absolute;inset:-100px;background-image:radial-gradient(ellipse 27px 34px at 50% 50%,#efca4d 0 72%,transparent 74%);background-size:160px 190px;opacity:.34;transform:rotate(15deg)}
+.checkers{position:absolute;inset:-80px;background-image:repeating-linear-gradient(15deg,transparent 0 34px,#f2d05b55 35px 78px),repeating-linear-gradient(105deg,transparent 0 34px,#f2d05b55 35px 78px);opacity:.75}
+.leaf{position:absolute;font-size:clamp(64px,9vw,150px);line-height:1;filter:drop-shadow(1px 2px 0 #8d641c55);user-select:none}
+.l1{left:0.5%;top:14%;color:#c32b0b;transform:rotate(-25deg)}.l2{left:6%;top:34%;color:#c32b0b;transform:rotate(20deg)}.l3{left:39%;top:-5%;color:#c32b0b;transform:rotate(22deg);font-size:100px}.l4{left:40%;top:18%;color:#f28a00;transform:rotate(15deg);font-size:105px}.l5{right:24%;top:8%;color:#f39800;transform:rotate(25deg);font-size:110px}.l6{left:20%;bottom:21%;color:#f2df00;transform:rotate(-30deg)}.l7{left:40%;bottom:18%;color:#f2df00;transform:rotate(20deg);font-size:150px}.l8{right:29%;bottom:33%;color:#c32b0b;transform:rotate(5deg);font-size:110px}.l9{right:0;bottom:18%;color:#f39800;transform:rotate(-20deg);font-size:120px}
+.center{position:absolute;left:50%;top:39%;transform:translate(-50%,-10%);display:flex;flex-direction:column;align-items:center;z-index:2}
+h1{font-size:54px;line-height:1;margin:0 0 23px;color:#fff;font-weight:1000;letter-spacing:-2px;text-shadow:0 2px 2px #0002}
+form{display:flex;gap:6px}input{width:136px;height:42px;border:0;border-radius:5px;background:#fff;text-align:center;font-size:22px;font-weight:700;color:#555;outline:none;box-shadow:0 2px 2px #0002}input::placeholder{color:#777;opacity:1}button.go{width:41px;height:42px;border:0;border-radius:5px;background:#fff;color:#666;font-size:28px;font-weight:bold;cursor:pointer;box-shadow:0 2px 2px #0002}button.go:hover{background:#f4f4f4}
+.notice{position:fixed;z-index:5;left:25px;bottom:25px;width:296px;padding:16px 18px 14px;background:#fff;border-radius:4px;color:#333;box-shadow:0 2px 10px #0002;font-size:10px;line-height:1.65}.notice strong{display:block;font-size:12px;margin-bottom:7px}.notice p{margin:0 0 10px}.actions{display:flex;gap:5px}.actions button{height:31px;flex:1;border:1px solid #9632b1;background:#9632b1;color:#fff;font-size:9px;font-weight:600;cursor:pointer}.actions .custom{background:#fff;color:#9632b1}
+@media(max-width:600px){.topbar{font-size:15px}.brand{font-size:20px}.join{font-size:14px}.login{font-size:13px}.notice{left:12px;bottom:12px;width:min(296px,calc(100vw - 24px))}.center{top:38%}h1{font-size:44px}}
+</style>
 </head>
 <body>
-  <div class="checks" aria-hidden="true"></div>
-  <header>
-    <a class="brand" href="https://www.blooket.com/">Blooket</a>
-    <div class="header-title">Join a Game</div>
-    <a class="login" href="https://id.blooket.com/login">Log In</a>
-  </header>
-  <main>
-    <section class="panel" aria-label="Join a game">
-      <h1>Blooket</h1>
-      <form id="join-form" autocomplete="off">
-        <div class="row">
-          <input id="game-code" name="game-code" type="tel" inputmode="numeric" maxlength="7" placeholder="Game ID" aria-label="Enter Game ID" autofocus>
-          <button type="submit" aria-label="Submit">➜</button>
-        </div>
-        <div class="notice" id="notice" role="status" aria-live="polite"></div>
-      </form>
-      <p class="hint">Enter a game code to continue</p>
-    </section>
-  </main>
-  <script>
-    document.getElementById('join-form').addEventListener('submit', function (event) {
-      event.preventDefault();
-      const code = document.getElementById('game-code').value.trim();
-      if (code === '5234') {
-        // Open a blank tab directly from the submit gesture so popup blockers are less likely to block it.
-        const blank = window.open('about:blank', '_blank');
-        if (blank) {
-          blank.document.title = '';
-          blank.document.body.innerHTML = '';
-        } else {
-          document.getElementById('notice').textContent = 'Your browser blocked the new tab. Allow pop-ups and try again.';
-        }
-        return;
-      }
-      document.getElementById('notice').textContent = 'This demo page only handles the special code 5234.';
-    });
-  </script>
-</body>
-</html>
+<header class="topbar"><div class="brand">Blooket</div><div class="join">Join a Game</div><a class="login" href="https://id.blooket.com/login">Log In</a></header>
+<main class="scene"><div class="checkers"></div>
+<span class="leaf l1">🍁</span><span class="leaf l2">🍁</span><span class="leaf l3">🍁</span><span class="leaf l4">🍂</span><span class="leaf l5">🍁</span><span class="leaf l6">🍁</span><span class="leaf l7">🍁</span><span class="leaf l8">🍁</span><span class="leaf l9">🍂</span>
+<section class="center"><h1>Blooket</h1><form id="joinForm"><input id="gameCode" name="gameCode" inputmode="numeric" autocomplete="off" placeholder="Game ID" aria-label="Game ID"><button class="go" type="submit" aria-label="Join game">➜</button></form></section>
+</main>
+<aside class="notice" id="cookieNotice"><strong>Accept cookies from Blooket?</strong><p>Cookies are small files placed on your device that collect information when you use Blooket. Essential cookies are used to make our site work and are required. Other types of cookies are used to improve your experience, to analyze how Blooket is used, and to market our service. By clicking “Accept All”, you agree to allow these other cookies.</p><div class="actions"><button class="custom" type="button">Customize</button><button type="button" class="dismiss">Reject All</button><button type="button" class="dismiss">Accept All</button></div></aside>
+<script>
+document.querySelectorAll('.dismiss').forEach(b=>b.addEventListener('click',()=>document.getElementById('cookieNotice').remove()));
+document.getElementById('joinForm').addEventListener('submit',e=>{e.preventDefault();const code=document.getElementById('gameCode').value.trim();if(code==='5234'){const tab=window.open('about:blank','_blank');if(tab){tab.document.title='';tab.document.body.innerHTML='';} }});
+</script>
+</body></html>
