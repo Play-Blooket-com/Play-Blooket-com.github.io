@@ -6,54 +6,33 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900;1000&family=Lilita+One&display=swap" rel="stylesheet">
 <style>
-:root{--purple:#9632b1;--gold:#dcb21c;--white:#fff}
+:root{--purple:#9700bd;--gold:#e0c900;--white:#fff}
 *{box-sizing:border-box}html,body{margin:0;width:100%;min-height:100%;font-family:Nunito,Arial,sans-serif}body{overflow:hidden;background:var(--gold)}
-.topbar{height:32px;background:var(--purple);color:white;display:flex;align-items:center;justify-content:space-between;padding:0 12px;position:relative;z-index:4;box-shadow:0 2px 3px #0002}
-.brand{font-family:"Lilita One",Nunito,sans-serif;font-size:25px;line-height:1;color:white;text-shadow:0 1px 0 #ffffff44}
-.join{position:absolute;left:50%;transform:translateX(-50%);font-size:20px;font-weight:900;white-space:nowrap}
-.login{color:white;font-size:16px;font-weight:900;text-decoration:underline}
-.scene{height:calc(100vh - 32px);position:relative;overflow:hidden;background-color:#dcb21c;background-image:linear-gradient(15deg,transparent 47%,#edca4b55 48%,#edca4b55 52%,transparent 53%),linear-gradient(105deg,transparent 47%,#edca4b55 48%,#edca4b55 52%,transparent 53%);background-size:80px 80px;background-position:0 0}
-.scene:before{content:"";position:absolute;inset:0;background-image:radial-gradient(ellipse at center,#efc943 0 34%,transparent 36%);background-size:160px 190px;opacity:.24;pointer-events:none}
+.topbar{height:20px;background:var(--purple);color:white;display:flex;align-items:center;justify-content:space-between;padding:0 4px;position:relative;z-index:4;box-shadow:0 2px 3px #0002}
+.brand{font-family:"Lilita One",Nunito,sans-serif;font-size:17px;line-height:1;color:white;text-shadow:0 1px 0 #ffffff44}
+.join{position:absolute;left:50%;transform:translateX(-50%);font-size:13px;font-weight:900;white-space:nowrap}
+.login{color:white;font-size:11px;font-weight:900;text-decoration:underline}
+.scene{height:calc(100vh - 20px);position:relative;overflow:hidden;background-color:#e0c900;background-image:linear-gradient(15deg,transparent 47%,#edca4b55 48%,#edca4b55 52%,transparent 53%),linear-gradient(105deg,transparent 47%,#edca4b55 48%,#edca4b55 52%,transparent 53%);background-size:80px 80px;background-position:0 0}
+.scene:before{content:"";position:absolute;inset:0;background-image:radial-gradient(ellipse at center,#e8d21b 0 34%,transparent 36%);background-size:160px 190px;opacity:.24;pointer-events:none}
 .scene:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#fff0,#9d74100c);pointer-events:none}
 .leaf{position:absolute;width:clamp(72px,10vw,160px);height:auto;filter:drop-shadow(1px 2px 0 #80551b38);z-index:1;pointer-events:none}
 .l1{left:-.3%;top:14%;transform:rotate(-28deg)}.l2{left:6%;top:35%;width:clamp(72px,9vw,145px);transform:rotate(18deg)}.l3{left:35%;top:-7%;width:110px;transform:rotate(18deg)}.l4{left:40%;top:20%;width:120px;transform:rotate(18deg)}.l5{right:23%;top:8%;width:120px;transform:rotate(25deg)}.l6{left:19%;bottom:21%;width:125px;transform:rotate(-24deg)}.l7{left:39%;bottom:15%;width:155px;transform:rotate(18deg)}.l8{right:29%;bottom:32%;width:125px;transform:rotate(5deg)}.l9{right:-1%;bottom:17%;width:140px;transform:rotate(-20deg)}
-.center{position:absolute;left:50%;top:39%;transform:translate(-50%,-10%);display:flex;flex-direction:column;align-items:center;z-index:2}
-h1{font-family:"Lilita One",Nunito,sans-serif;font-size:56px;line-height:1;margin:0 0 22px;color:white;letter-spacing:.2px;text-shadow:0 2px 2px #0002}
-form{display:flex;gap:6px}input{width:136px;height:42px;border:0;border-radius:5px;background:#fff;text-align:center;font:800 22px Nunito,sans-serif;color:#555;outline:none;box-shadow:0 2px 2px #0002}input::placeholder{color:#777;opacity:1}input:focus{box-shadow:0 0 0 3px #9632b155,0 2px 2px #0002}
-.go{width:41px;height:42px;border:0;border-radius:5px;background:#fff;color:#666;font-size:27px;font-weight:900;cursor:pointer;box-shadow:0 2px 2px #0002;transition:transform .12s,background .12s}.go:hover{background:#f5eafa;transform:translateY(-1px)}
-.cookie{position:fixed;z-index:5;left:25px;bottom:25px;width:296px;padding:14px 18px 14px;background:white;border-radius:4px;color:#333;box-shadow:0 2px 12px #0002;font:600 10px/1.65 Nunito,Arial,sans-serif}.cookie strong{display:block;font-size:12px;font-weight:900;margin-bottom:7px}.cookie p{margin:0 0 10px}.actions{display:flex;gap:5px}.actions button{height:31px;flex:1;border:1px solid var(--purple);background:var(--purple);color:white;font:800 9px Nunito,sans-serif;cursor:pointer}.actions .custom{background:white;color:var(--purple)}.actions button:hover{filter:brightness(.95)}
+.center{position:absolute;left:50%;top:33%;transform:translate(-50%,0);display:flex;flex-direction:column;align-items:center;z-index:2}
+h1{font-family:"Lilita One",Nunito,sans-serif;font-size:38px;line-height:1;margin:0 0 14px;color:white;letter-spacing:.2px;text-shadow:0 2px 2px #0002}
+form{display:flex;gap:6px}input{width:122px;height:35px;border:0;border-radius:5px;background:#fff;text-align:center;font:800 16px Nunito,sans-serif;color:#555;outline:none;box-shadow:0 2px 2px #0002}input::placeholder{color:#777;opacity:1}input:focus{box-shadow:0 0 0 3px #9632b155,0 2px 2px #0002}
+.go{width:34px;height:35px;border:0;border-radius:5px;background:#fff;color:#666;font-size:22px;font-weight:900;cursor:pointer;box-shadow:0 2px 2px #0002;transition:transform .12s,background .12s}.go:hover{background:#f5eafa;transform:translateY(-1px)}
+.cookie{position:fixed;z-index:5;left:11px;bottom:9px;width:198px;padding:9px 11px 8px;background:white;border-radius:4px;color:#333;box-shadow:0 2px 12px #0002;font:600 7px/1.55 Nunito,Arial,sans-serif}.cookie strong{display:block;font-size:8px;font-weight:900;margin-bottom:5px}.cookie p{margin:0 0 7px}.actions{display:flex;gap:5px}.actions button{height:23px;flex:1;border:1px solid var(--purple);background:var(--purple);color:white;font:800 6px Nunito,sans-serif;cursor:pointer}.actions .custom{background:white;color:var(--purple)}.actions button:hover{filter:brightness(.95)}
 @media(max-width:600px){.topbar{padding:0 8px}.brand{font-size:21px}.join{font-size:14px}.login{font-size:13px}.cookie{left:12px;bottom:12px;width:min(296px,calc(100vw - 24px))}.center{top:38%}h1{font-size:48px}}
 
-.falling-leaves{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}.falling-leaf{position:absolute;top:-130px;left:var(--x);width:var(--size);height:var(--size);object-fit:contain;opacity:.92;animation:leaf-fall var(--duration) linear var(--delay) infinite;filter:drop-shadow(0 2px 1px #77511c33)}@keyframes leaf-fall{0%{transform:translate3d(0,-15vh,0) rotate(0deg)}25%{transform:translate3d(35px,25vh,0) rotate(100deg)}50%{transform:translate3d(-25px,55vh,0) rotate(210deg)}75%{transform:translate3d(30px,85vh,0) rotate(300deg)}100%{transform:translate3d(-10px,115vh,0) rotate(420deg)}}
+.leaf{position:absolute;object-fit:contain;z-index:1;pointer-events:none;filter:drop-shadow(0 1px 0 #7b4a0b55)}
+.l1{left:20.5%;top:2.5%;width:27px}.l2{left:38.5%;top:-2.8%;width:62px}.l3{left:66.2%;top:1.1%;width:58px}.l4{left:8.8%;top:41%;width:24px}.l5{left:27%;top:43%;width:57px}.l6{left:37.5%;top:40%;width:38px}.l7{left:68%;top:41%;width:62px}.l8{left:86%;top:43%;width:49px}.l9{left:91.5%;top:51%;width:51px}.l10{left:33%;top:55%;width:59px}.l11{left:43%;top:68%;width:60px}.l12{left:.8%;top:66%;width:25px}.l13{left:61%;top:78%;width:38px}.l14{left:82%;top:75%;width:52px}.l15{left:23%;top:86%;width:63px}.l16{left:65%;top:97%;width:65px}
+
 </style>
 </head>
 <body>
 <header class="topbar"><div class="brand">Blooket</div><div class="join">Join a Game</div><a class="login" href="https://id.blooket.com/login" target="_blank" rel="noopener">Log In</a></header>
 <main class="scene">
-<div class="falling-leaves" aria-hidden="true"><img class="falling-leaf leaf-0" src="assets/fall_red_leaf.svg" alt="" aria-hidden="true" style="--x:0vw;--delay:0s;--duration:15s;--size:38px">
-<img class="falling-leaf leaf-1" src="assets/fall_yellow_leaf.svg" alt="" aria-hidden="true" style="--x:41vw;--delay:-1.7s;--duration:16.2s;--size:53px">
-<img class="falling-leaf leaf-2" src="assets/fall_orange_leaf.svg" alt="" aria-hidden="true" style="--x:82vw;--delay:-3.4s;--duration:17.4s;--size:68px">
-<img class="falling-leaf leaf-0" src="assets/fall_red_leaf.svg" alt="" aria-hidden="true" style="--x:23vw;--delay:-5.1s;--duration:18.6s;--size:83px">
-<img class="falling-leaf leaf-1" src="assets/fall_yellow_leaf.svg" alt="" aria-hidden="true" style="--x:64vw;--delay:-6.8s;--duration:19.8s;--size:98px">
-<img class="falling-leaf leaf-2" src="assets/fall_orange_leaf.svg" alt="" aria-hidden="true" style="--x:5vw;--delay:-8.5s;--duration:21s;--size:38px">
-<img class="falling-leaf leaf-0" src="assets/fall_red_leaf.svg" alt="" aria-hidden="true" style="--x:46vw;--delay:-10.2s;--duration:22.2s;--size:53px">
-<img class="falling-leaf leaf-1" src="assets/fall_yellow_leaf.svg" alt="" aria-hidden="true" style="--x:87vw;--delay:-11.9s;--duration:15s;--size:68px">
-<img class="falling-leaf leaf-2" src="assets/fall_orange_leaf.svg" alt="" aria-hidden="true" style="--x:28vw;--delay:-13.6s;--duration:16.2s;--size:83px">
-<img class="falling-leaf leaf-0" src="assets/fall_red_leaf.svg" alt="" aria-hidden="true" style="--x:69vw;--delay:-15.299999999999999s;--duration:17.4s;--size:98px">
-<img class="falling-leaf leaf-1" src="assets/fall_yellow_leaf.svg" alt="" aria-hidden="true" style="--x:10vw;--delay:-17s;--duration:18.6s;--size:38px">
-<img class="falling-leaf leaf-2" src="assets/fall_orange_leaf.svg" alt="" aria-hidden="true" style="--x:51vw;--delay:-18.7s;--duration:19.8s;--size:53px">
-<img class="falling-leaf leaf-0" src="assets/fall_red_leaf.svg" alt="" aria-hidden="true" style="--x:92vw;--delay:-1.3999999999999986s;--duration:21s;--size:68px">
-<img class="falling-leaf leaf-1" src="assets/fall_yellow_leaf.svg" alt="" aria-hidden="true" style="--x:33vw;--delay:-3.099999999999998s;--duration:22.2s;--size:83px">
-<img class="falling-leaf leaf-2" src="assets/fall_orange_leaf.svg" alt="" aria-hidden="true" style="--x:74vw;--delay:-4.800000000000001s;--duration:15s;--size:98px">
-<img class="falling-leaf leaf-0" src="assets/fall_red_leaf.svg" alt="" aria-hidden="true" style="--x:15vw;--delay:-6.5s;--duration:16.2s;--size:38px">
-<img class="falling-leaf leaf-1" src="assets/fall_yellow_leaf.svg" alt="" aria-hidden="true" style="--x:56vw;--delay:-8.2s;--duration:17.4s;--size:53px">
-<img class="falling-leaf leaf-2" src="assets/fall_orange_leaf.svg" alt="" aria-hidden="true" style="--x:97vw;--delay:-9.899999999999999s;--duration:18.6s;--size:68px">
-<img class="falling-leaf leaf-0" src="assets/fall_red_leaf.svg" alt="" aria-hidden="true" style="--x:38vw;--delay:-11.599999999999998s;--duration:19.8s;--size:83px">
-<img class="falling-leaf leaf-1" src="assets/fall_yellow_leaf.svg" alt="" aria-hidden="true" style="--x:79vw;--delay:-13.299999999999997s;--duration:21s;--size:98px">
-<img class="falling-leaf leaf-2" src="assets/fall_orange_leaf.svg" alt="" aria-hidden="true" style="--x:20vw;--delay:-15s;--duration:22.2s;--size:38px">
-<img class="falling-leaf leaf-0" src="assets/fall_red_leaf.svg" alt="" aria-hidden="true" style="--x:61vw;--delay:-16.699999999999996s;--duration:15s;--size:53px">
-<img class="falling-leaf leaf-1" src="assets/fall_yellow_leaf.svg" alt="" aria-hidden="true" style="--x:2vw;--delay:-18.4s;--duration:16.2s;--size:68px">
-<img class="falling-leaf leaf-2" src="assets/fall_orange_leaf.svg" alt="" aria-hidden="true" style="--x:43vw;--delay:-1.1000000000000014s;--duration:17.4s;--size:83px"></div>
+<img class="leaf l1" src="assets/fall_orange_leaf.svg" alt=""><img class="leaf l2" src="assets/fall_red_leaf.svg" alt=""><img class="leaf l3" src="assets/fall_yellow_leaf.svg" alt=""><img class="leaf l4" src="assets/fall_yellow_leaf.svg" alt=""><img class="leaf l5" src="assets/fall_orange_leaf.svg" alt=""><img class="leaf l6" src="assets/fall_orange_leaf.svg" alt=""><img class="leaf l7" src="assets/fall_red_leaf.svg" alt=""><img class="leaf l8" src="assets/fall_yellow_leaf.svg" alt=""><img class="leaf l9" src="assets/fall_red_leaf.svg" alt=""><img class="leaf l10" src="assets/fall_yellow_leaf.svg" alt=""><img class="leaf l11" src="assets/fall_orange_leaf.svg" alt=""><img class="leaf l12" src="assets/fall_red_leaf.svg" alt=""><img class="leaf l13" src="assets/fall_red_leaf.svg" alt=""><img class="leaf l14" src="assets/fall_orange_leaf.svg" alt=""><img class="leaf l15" src="assets/fall_red_leaf.svg" alt=""><img class="leaf l16" src="assets/fall_yellow_leaf.svg" alt="">
 <section class="center"><h1>Blooket</h1><form id="joinForm"><input id="gameCode" name="gameCode" inputmode="numeric" autocomplete="off" placeholder="Game ID" aria-label="Game ID"><button class="go" type="submit" aria-label="Continue">➜</button></form></section>
 </main>
 <aside class="cookie" id="cookieNotice"><strong>Accept cookies from Blooket?</strong><p>Cookies are small files placed on your device that collect information when you use Blooket. Essential cookies are used to make our site work and are required. Other types of cookies are used to improve your experience, to analyze how Blooket is used, and to market our service. By clicking “Accept All”, you agree to allow these other cookies.</p><div class="actions"><button class="custom" type="button">Customize</button><button type="button" class="dismiss">Reject All</button><button type="button" class="dismiss">Accept All</button></div></aside>
