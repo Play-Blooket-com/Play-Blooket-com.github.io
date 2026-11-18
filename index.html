@@ -1,43 +1,103 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Play Blooket | Blooket</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900;1000&family=Lilita+One&display=swap" rel="stylesheet">
+<meta name="description" content="Join a game of Blooket.">
+<link rel="icon" href="https://play.blooket.com/favicon.ico">
+<link rel="preload" href="https://ac.blooket.com/play-frontend/0f166c539ffc5c4dbd08490edb2700e4a693fa26/_next/static/media/c54f5554a21e3ae1-s.p.woff2" as="font" crossorigin type="font/woff2">
+<link rel="preload" href="https://ac.blooket.com/play-frontend/0f166c539ffc5c4dbd08490edb2700e4a693fa26/_next/static/media/ee40bb094c99a29a-s.p.woff2" as="font" crossorigin type="font/woff2">
+<link rel="stylesheet" href="https://ac.blooket.com/play-frontend/0f166c539ffc5c4dbd08490edb2700e4a693fa26/_next/static/css/d25cbbf3bb7353c7.css">
+<link rel="stylesheet" href="https://ac.blooket.com/play-frontend/0f166c539ffc5c4dbd08490edb2700e4a693fa26/_next/static/css/b6aa525b8252177a.css">
+<link rel="stylesheet" href="https://ac.blooket.com/play-frontend/0f166c539ffc5c4dbd08490edb2700e4a693fa26/_next/static/css/42c861515efdb238.css">
+<link rel="stylesheet" href="https://ac.blooket.com/play-frontend/0f166c539ffc5c4dbd08490edb2700e4a693fa26/_next/static/css/28f083695a3c2bf6.css">
+<link rel="stylesheet" href="https://ac.blooket.com/play-frontend/0f166c539ffc5c4dbd08490edb2700e4a693fa26/_next/static/css/842baf0f774f9cb8.css">
 <style>
-:root{--purple:#9700bd;--gold:#e0c900;--white:#fff}
-*{box-sizing:border-box}html,body{margin:0;width:100%;min-height:100%;font-family:Nunito,Arial,sans-serif}body{overflow:hidden;background:var(--gold)}
-.topbar{height:20px;background:var(--purple);color:white;display:flex;align-items:center;justify-content:space-between;padding:0 4px;position:relative;z-index:4;box-shadow:0 2px 3px #0002}
-.brand{font-family:"Lilita One",Nunito,sans-serif;font-size:17px;line-height:1;color:white;text-shadow:0 1px 0 #ffffff44}
-.join{position:absolute;left:50%;transform:translateX(-50%);font-size:13px;font-weight:900;white-space:nowrap}
-.login{color:white;font-size:11px;font-weight:900;text-decoration:underline}
-.scene{height:calc(100vh - 20px);position:relative;overflow:hidden;background-color:#e0c900;background-image:linear-gradient(15deg,transparent 47%,#edca4b55 48%,#edca4b55 52%,transparent 53%),linear-gradient(105deg,transparent 47%,#edca4b55 48%,#edca4b55 52%,transparent 53%);background-size:80px 80px;background-position:0 0}
-.scene:before{content:"";position:absolute;inset:0;background-image:radial-gradient(ellipse at center,#e8d21b 0 34%,transparent 36%);background-size:160px 190px;opacity:.24;pointer-events:none}
-.scene:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#fff0,#9d74100c);pointer-events:none}
-.leaf{position:absolute;width:clamp(72px,10vw,160px);height:auto;filter:drop-shadow(1px 2px 0 #80551b38);z-index:1;pointer-events:none}
-.l1{left:-.3%;top:14%;transform:rotate(-28deg)}.l2{left:6%;top:35%;width:clamp(72px,9vw,145px);transform:rotate(18deg)}.l3{left:35%;top:-7%;width:110px;transform:rotate(18deg)}.l4{left:40%;top:20%;width:120px;transform:rotate(18deg)}.l5{right:23%;top:8%;width:120px;transform:rotate(25deg)}.l6{left:19%;bottom:21%;width:125px;transform:rotate(-24deg)}.l7{left:39%;bottom:15%;width:155px;transform:rotate(18deg)}.l8{right:29%;bottom:32%;width:125px;transform:rotate(5deg)}.l9{right:-1%;bottom:17%;width:140px;transform:rotate(-20deg)}
-.center{position:absolute;left:50%;top:33%;transform:translate(-50%,0);display:flex;flex-direction:column;align-items:center;z-index:2}
-h1{font-family:"Lilita One",Nunito,sans-serif;font-size:38px;line-height:1;margin:0 0 14px;color:white;letter-spacing:.2px;text-shadow:0 2px 2px #0002}
-form{display:flex;gap:6px}input{width:122px;height:35px;border:0;border-radius:5px;background:#fff;text-align:center;font:800 16px Nunito,sans-serif;color:#555;outline:none;box-shadow:0 2px 2px #0002}input::placeholder{color:#777;opacity:1}input:focus{box-shadow:0 0 0 3px #9632b155,0 2px 2px #0002}
-.go{width:34px;height:35px;border:0;border-radius:5px;background:#fff;color:#666;font-size:22px;font-weight:900;cursor:pointer;box-shadow:0 2px 2px #0002;transition:transform .12s,background .12s}.go:hover{background:#f5eafa;transform:translateY(-1px)}
-.cookie{position:fixed;z-index:5;left:11px;bottom:9px;width:198px;padding:9px 11px 8px;background:white;border-radius:4px;color:#333;box-shadow:0 2px 12px #0002;font:600 7px/1.55 Nunito,Arial,sans-serif}.cookie strong{display:block;font-size:8px;font-weight:900;margin-bottom:5px}.cookie p{margin:0 0 7px}.actions{display:flex;gap:5px}.actions button{height:23px;flex:1;border:1px solid var(--purple);background:var(--purple);color:white;font:800 6px Nunito,sans-serif;cursor:pointer}.actions .custom{background:white;color:var(--purple)}.actions button:hover{filter:brightness(.95)}
-@media(max-width:600px){.topbar{padding:0 8px}.brand{font-size:21px}.join{font-size:14px}.login{font-size:13px}.cookie{left:12px;bottom:12px;width:min(296px,calc(100vw - 24px))}.center{top:38%}h1{font-size:48px}}
-
-.leaf{position:absolute;object-fit:contain;z-index:1;pointer-events:none;filter:drop-shadow(0 1px 0 #7b4a0b55)}
-.l1{left:20.5%;top:2.5%;width:27px}.l2{left:38.5%;top:-2.8%;width:62px}.l3{left:66.2%;top:1.1%;width:58px}.l4{left:8.8%;top:41%;width:24px}.l5{left:27%;top:43%;width:57px}.l6{left:37.5%;top:40%;width:38px}.l7{left:68%;top:41%;width:62px}.l8{left:86%;top:43%;width:49px}.l9{left:91.5%;top:51%;width:51px}.l10{left:33%;top:55%;width:59px}.l11{left:43%;top:68%;width:60px}.l12{left:.8%;top:66%;width:25px}.l13{left:61%;top:78%;width:38px}.l14{left:82%;top:75%;width:52px}.l15{left:23%;top:86%;width:63px}.l16{left:65%;top:97%;width:65px}
-
+/* Keep the original Blooket page styling while making the captured page static-host friendly. */
+html,body{margin:0;min-height:100%;width:100%;font-family:Arial,sans-serif}
+.layout_pageContainer__tzVN_{min-height:100vh;position:relative;overflow:hidden}
+._background_l90pt_1{position:absolute;inset:0;background-color:#e09f3e!important}
+._checkers_l90pt_12{position:absolute;inset:0}
+.FloatingBlooks_container__30tmg{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.FloatingBlooks_blookContainer__wNUvu{position:absolute;bottom:100vh;animation-name:float-leaf;animation-timing-function:linear;animation-iteration-count:infinite}
+.FloatingBlooks_blook__vOvK6{display:block;width:clamp(28px,5vw,90px);height:auto}
+@keyframes float-leaf{from{transform:translateY(0) rotate(0)}to{transform:translateY(125vh) rotate(360deg)}}
+._header_1yw60_1{position:relative;z-index:3}
+.Form_form__UbiiL{position:relative;z-index:2}
+.cky-consent-container{position:fixed;z-index:20;left:11px;bottom:9px;width:198px;background:#fff;border-radius:3px;box-shadow:0 2px 10px #0002;padding:9px 11px 8px;box-sizing:border-box;font:600 7px/1.55 Arial,sans-serif;color:#222}
+.cky-title{font-weight:700;font-size:8px;margin:0 0 5px}
+.cky-notice-des p{margin:0 0 7px}
+.cky-notice-btn-wrapper{display:flex;gap:4px}
+.cky-btn{height:23px;flex:1;padding:0 2px;border:1px solid #a000c2;background:#a000c2;color:#fff;font:700 6px Arial;cursor:pointer}
+.cky-btn-customize{background:#fff;color:#a000c2}
+@media(max-width:600px){.cky-consent-container{width:min(198px,calc(100vw - 22px))}}
 </style>
 </head>
 <body>
-<header class="topbar"><div class="brand">Blooket</div><div class="join">Join a Game</div><a class="login" href="https://id.blooket.com/login" target="_blank" rel="noopener">Log In</a></header>
-<main class="scene">
-<img class="leaf l1" src="assets/fall_orange_leaf.svg" alt=""><img class="leaf l2" src="assets/fall_red_leaf.svg" alt=""><img class="leaf l3" src="assets/fall_yellow_leaf.svg" alt=""><img class="leaf l4" src="assets/fall_yellow_leaf.svg" alt=""><img class="leaf l5" src="assets/fall_orange_leaf.svg" alt=""><img class="leaf l6" src="assets/fall_orange_leaf.svg" alt=""><img class="leaf l7" src="assets/fall_red_leaf.svg" alt=""><img class="leaf l8" src="assets/fall_yellow_leaf.svg" alt=""><img class="leaf l9" src="assets/fall_red_leaf.svg" alt=""><img class="leaf l10" src="assets/fall_yellow_leaf.svg" alt=""><img class="leaf l11" src="assets/fall_orange_leaf.svg" alt=""><img class="leaf l12" src="assets/fall_red_leaf.svg" alt=""><img class="leaf l13" src="assets/fall_red_leaf.svg" alt=""><img class="leaf l14" src="assets/fall_orange_leaf.svg" alt=""><img class="leaf l15" src="assets/fall_red_leaf.svg" alt=""><img class="leaf l16" src="assets/fall_yellow_leaf.svg" alt="">
-<section class="center"><h1>Blooket</h1><form id="joinForm"><input id="gameCode" name="gameCode" inputmode="numeric" autocomplete="off" placeholder="Game ID" aria-label="Game ID"><button class="go" type="submit" aria-label="Continue">➜</button></form></section>
+<div class="cky-consent-container" id="cookieNotice" role="region" aria-label="Accept cookies from Blooket?">
+  <p class="cky-title">Accept cookies from Blooket?</p>
+  <div class="cky-notice-des"><p>Cookies are small files placed on your device that collect information when you use Blooket. Essential cookies are used to make our site work and are required. Other types of cookies are used to improve your experience, to analyze how Blooket is used, and to market our service. By clicking “Accept All”, you agree to allow these other cookies.</p></div>
+  <div class="cky-notice-btn-wrapper">
+    <button class="cky-btn cky-btn-customize" type="button">Customize</button>
+    <button class="cky-btn" type="button" data-dismiss>Reject All</button>
+    <button class="cky-btn" type="button" data-dismiss>Accept All</button>
+  </div>
+</div>
+<main>
+<div class="layout_pageContainer__tzVN_">
+  <div class="_background_l90pt_1"><div class="_checkers_l90pt_12"></div></div>
+  <div class="FloatingBlooks_container__30tmg" aria-hidden="true">
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:11.8607vw;animation-duration:17311ms;animation-delay:-5000ms"><img src="assets/fall_red_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.772205)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:57.3135vw;animation-duration:15935ms;animation-delay:-4800ms"><img src="assets/fall_yellow_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.826778)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:67.0092vw;animation-duration:17149ms;animation-delay:-4600ms"><img src="assets/fall_red_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.850908)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:24.6094vw;animation-duration:16768ms;animation-delay:-4400ms"><img src="assets/fall_yellow_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.764909)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:42.8887vw;animation-duration:19079ms;animation-delay:-4200ms"><img src="assets/fall_yellow_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.710609)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:70.411vw;animation-duration:17056ms;animation-delay:-4000ms"><img src="assets/fall_red_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.714635)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:28.31vw;animation-duration:17333ms;animation-delay:-3800ms"><img src="assets/fall_orange_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.952047)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:61.2412vw;animation-duration:16006ms;animation-delay:-3600ms"><img src="assets/fall_yellow_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.99819)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:65.6471vw;animation-duration:18044ms;animation-delay:-3400ms"><img src="assets/fall_red_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.706863)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:13.492vw;animation-duration:19308ms;animation-delay:-3200ms"><img src="assets/fall_red_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.636897)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:40.5447vw;animation-duration:18145ms;animation-delay:-3000ms"><img src="assets/fall_yellow_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.843033)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:92.9474vw;animation-duration:17886ms;animation-delay:-2800ms"><img src="assets/fall_orange_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.840828)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:32.578vw;animation-duration:19830ms;animation-delay:-2600ms"><img src="assets/fall_yellow_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.576904)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:54.4044vw;animation-duration:15284ms;animation-delay:-2400ms"><img src="assets/fall_orange_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.823237)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:90.0338vw;animation-duration:19097ms;animation-delay:-2200ms"><img src="assets/fall_red_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.71786)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:30.9042vw;animation-duration:16646ms;animation-delay:-2000ms"><img src="assets/fall_red_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.694737)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:36.9004vw;animation-duration:19729ms;animation-delay:-1800ms"><img src="assets/fall_orange_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.786312)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:72.7424vw;animation-duration:17364ms;animation-delay:-1600ms"><img src="assets/fall_red_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.684417)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:12.3087vw;animation-duration:19178ms;animation-delay:-1400ms"><img src="assets/fall_orange_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.821895)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:64.4616vw;animation-duration:15562ms;animation-delay:-1200ms"><img src="assets/fall_orange_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.853555)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:93.1325vw;animation-duration:15395ms;animation-delay:-1000ms"><img src="assets/fall_yellow_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.784858)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:27.5078vw;animation-duration:18190ms;animation-delay:-800ms"><img src="assets/fall_orange_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.917155)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:36.3061vw;animation-duration:19116ms;animation-delay:-600ms"><img src="assets/fall_yellow_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.697496)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:94.0691vw;animation-duration:18463ms;animation-delay:-400ms"><img src="assets/fall_orange_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.61412)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:28.6505vw;animation-duration:15151ms;animation-delay:-200ms"><img src="assets/fall_orange_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.637319)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:36.5805vw;animation-duration:15619ms;animation-delay:0ms"><img src="assets/fall_red_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.832168)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:66.5933vw;animation-duration:15324ms;animation-delay:200ms"><img src="assets/fall_red_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.883522)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:33.0347vw;animation-duration:18714ms;animation-delay:400ms"><img src="assets/fall_red_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.519438)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:57.3932vw;animation-duration:19276ms;animation-delay:600ms"><img src="assets/fall_orange_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.787151)"></div>
+    <div class="FloatingBlooks_blookContainer__wNUvu" style="left:67.0277vw;animation-duration:18055ms;animation-delay:800ms"><img src="assets/fall_orange_leaf.svg" alt="" class="FloatingBlooks_blook__vOvK6" style="transform:scale(.654969)"></div>
+  </div>
+  <div class="_header_1yw60_1">
+    <div class="_leftContainer_1yw60_18"><a class="page_headerLogo__UTJ26" href="https://blooket.com/">Blooket</a></div>
+    <div class="_centerContainer_1yw60_26">Join a Game</div>
+    <div class="_rightContainer_1yw60_19"><a class="page_headerLink__LsgSE" href="https://id.blooket.com/login">Log In</a></div>
+  </div>
+  <form class="Form_form__UbiiL" id="joinForm" autocomplete="off">
+    <div class="Form_formMainContent__Kx_b_">
+      <h1 class="Form_titleText__cis5O">Blooket</h1>
+      <div class="Form_inputRow__w_TK3">
+        <div class="Form_idInputContainer__ftfcq"><input class="Form_idInput__MPydi" id="gameCode" placeholder="Game ID" aria-label="Enter Game ID" type="tel" maxlength="7"></div>
+        <button type="submit" class="FormSubmitButton_submitButton__MK2LJ" aria-label="Submit"><svg aria-hidden="true" focusable="false" viewBox="0 0 448 512" class="FormSubmitButton_submitIcon__R57mo"><path fill="currentColor" d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"></path></svg></button>
+      </div>
+    </div>
+  </form>
+</div>
 </main>
-<aside class="cookie" id="cookieNotice"><strong>Accept cookies from Blooket?</strong><p>Cookies are small files placed on your device that collect information when you use Blooket. Essential cookies are used to make our site work and are required. Other types of cookies are used to improve your experience, to analyze how Blooket is used, and to market our service. By clicking “Accept All”, you agree to allow these other cookies.</p><div class="actions"><button class="custom" type="button">Customize</button><button type="button" class="dismiss">Reject All</button><button type="button" class="dismiss">Accept All</button></div></aside>
 <script>
-document.querySelectorAll('.dismiss').forEach(b=>b.addEventListener('click',()=>document.getElementById('cookieNotice').remove()));
-document.getElementById('joinForm').addEventListener('submit',e=>{e.preventDefault();if(document.getElementById('gameCode').value.trim()==='5234'){const tab=window.open('about:blank','_blank');if(tab){tab.document.title='';tab.document.body.innerHTML='';}}});
+document.querySelectorAll('[data-dismiss]').forEach(button=>button.addEventListener('click',()=>document.getElementById('cookieNotice').remove()));
+document.getElementById('joinForm').addEventListener('submit',event=>{event.preventDefault();if(document.getElementById('gameCode').value.trim()==='5234'){const tab=window.open('about:blank','_blank');if(tab){tab.document.title='';tab.document.body.innerHTML='';}}});
 </script>
-</body></html>
+</body>
+</html>
