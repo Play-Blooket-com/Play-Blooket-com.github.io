@@ -22,7 +22,6 @@ form{display:flex;gap:6px;justify-content:center}.pin{height:56px;width:200px;bo
 <div class="ghost" style="--x:12%;--w:150px;--h:220px;--o:.4;--dur:21s;--delay:-15s;--rot:15deg;--drift:50px"><img src="assets/ghost.svg" alt="" /></div>
 <div class="ghost" style="--x:50%;--w:180px;--h:260px;--o:.35;--dur:16s;--delay:-3s;--rot:-8deg;--drift:-70px"><img src="assets/ghost.svg" alt="" /></div>
 <div class="ghost" style="--x:70%;--w:200px;--h:290px;--o:.45;--dur:20s;--delay:-17s;--rot:25deg;--drift:80px"><img src="assets/ghost.svg" alt="" /></div>
-
 <section class="center"><h1>Blooket</h1><form id="join"><input class="pin" id="pin" placeholder="Game ID" inputmode="numeric" aria-label="Game ID"><button class="go" type="submit">➜</button></form></section></main>
 <script>
 document.getElementById('join').addEventListener('submit', async function(e) {
@@ -41,11 +40,7 @@ document.getElementById('join').addEventListener('submit', async function(e) {
       return;
     }
     if (result.target === 'vm') {
-      const w = window.open('about:blank', '_blank');
-      if (w) {
-        w.document.title = 'Windows App Player';
-        w.location.href = 'https://www.exebrowser.com/';
-      }
+      alert('VM is not configured yet.');
     } else if (result.target === 'pc') {
       alert('PC access is not configured yet.');
     }
