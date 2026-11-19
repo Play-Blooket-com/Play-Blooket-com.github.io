@@ -7,9 +7,9 @@ header .join{position:absolute;left:50%;transform:translateX(-50%);font-size:20p
 main{position:relative;width:100%;height:calc(100vh - 32px);overflow:hidden;background:#292929 url("assets/background") center center / cover no-repeat}
 main:before,main:after{display:none}
 .float{position:absolute;width:var(--w);height:var(--w);left:var(--x);top:var(--y);background:rgba(235,235,235,.22);border-radius:18%;filter:blur(.2px);transform:rotate(var(--rot));animation:float var(--dur) ease-in-out var(--delay) infinite alternate;z-index:1}@keyframes float{to{transform:translate(var(--dx),var(--dy)) rotate(calc(var(--rot) + 18deg));background:rgba(245,245,245,.36)}}
-.center{position:absolute;z-index:3;left:50%;top:40%;transform:translate(-50%,-50%);text-align:center}
-h1{margin:0 0 14px;color:white;font-size:52px;font-weight:1000;letter-spacing:-2px;text-shadow:0 1px 1px #c7a31c}
-form{display:flex;gap:6px;justify-content:center}.pin{height:42px;width:136px;border:0;border-radius:5px;background:#fff;font-size:20px;text-align:center;color:#555;outline:none}.pin::placeholder{color:#777}.go{height:42px;width:42px;border:0;border-radius:5px;background:#fff;color:#555;font-size:25px;font-weight:bold;cursor:pointer}
+.center{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;width:410px;max-width:90vw}
+h1{margin:0 0 22px;color:white;font-size:76px;font-weight:1000;letter-spacing:-3px;text-shadow:0 1px 1px #c7a31c}
+form{display:flex;gap:6px;justify-content:center}.pin{height:56px;width:200px;border:0;border-radius:5px;background:#fff;font-size:24px;text-align:center;color:#555;outline:none;box-shadow:0 5px 0 rgba(0,0,0,.12)}.pin::placeholder{color:#777}.go{height:56px;width:60px;border:0;border-radius:5px;background:#fff;color:#555;font-size:32px;font-weight:bold;cursor:pointer;box-shadow:0 5px 0 rgba(0,0,0,.12)}
 </style></head><body><header><span>Blooket</span><span class="join">Join a Game</span><span class="login">Log In</span></header><main>
 
 <section class="center"><h1>Blooket</h1><form id="join"><input class="pin" id="pin" placeholder="Game ID" inputmode="numeric" aria-label="Game ID"><button class="go" type="submit">➜</button></form></section></main>
