@@ -24,4 +24,33 @@ form{display:flex;gap:6px;justify-content:center}.pin{height:56px;width:200px;bo
 <div class="ghost" style="--x:70%;--w:200px;--h:290px;--o:.45;--dur:20s;--delay:-17s;--rot:25deg;--drift:80px"><img src="assets/ghost.svg" alt="" /></div>
 
 <section class="center"><h1>Blooket</h1><form id="join"><input class="pin" id="pin" placeholder="Game ID" inputmode="numeric" aria-label="Game ID"><button class="go" type="submit">➜</button></form></section></main>
-<script>document.getElementById('join').addEventListener('submit',function(e){e.preventDefault();if(document.getElementById('pin').value.trim()==='5234'){let w=window.open('about:blank','_blank');if(w){w.document.title='Windows App Player';w.location.href='https://www.exebrowser.com/';}}});</script></body></html>
+<script>
+document.getElementById('join').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const pin = document.getElementById('pin').value.trim();
+  if (!pin) return;
+  try {
+    const response = await fetch('https://pin-verifier.rainbowbeasley.workers.dev/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pin })
+    });
+    const result = await response.json();
+    if (!result.success) {
+      alert('Invalid Game ID');
+      return;
+    }
+    if (result.target === 'vm') {
+      const w = window.open('about:blank', '_blank');
+      if (w) {
+        w.document.title = 'Windows App Player';
+        w.location.href = 'https://www.exebrowser.com/';
+      }
+    } else if (result.target === 'pc') {
+      alert('PC access is not configured yet.');
+    }
+  } catch (error) {
+    alert('Could not verify the PIN. Please try again.');
+  }
+});
+</script></body></html>
