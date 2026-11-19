@@ -7,22 +7,22 @@ header .join{position:absolute;left:50%;transform:translateX(-50%);font-size:20p
 main{position:relative;width:100%;height:calc(100vh - 32px);overflow:hidden;background:#292929 url("assets/background") center center / cover no-repeat}
 main:before,main:after{display:none}
 .ghost{position:absolute;left:var(--x);top:-120px;width:var(--w);height:var(--h);z-index:1;opacity:var(--o);animation:ghost-fall var(--dur) linear var(--delay) infinite;filter:blur(.15px)}
-.ghost-body{position:relative;width:100%;height:100%;background:rgba(245,245,245,.30);border-radius:22%;clip-path:polygon(0 10%,18% 10%,22% 3%,32% 0,42% 3%,46% 10%,65% 10%,70% 3%,80% 0,90% 3%,94% 10%,100% 10%,100% 100%,0 100%);box-shadow:inset 8px 8px 18px rgba(255,255,255,.16),inset -10px -10px 18px rgba(0,0,0,.06);transform:perspective(500px) rotateX(4deg)}
+.ghost-body{position:relative;width:100%;height:100%;background:rgba(245,245,245,.30);border-radius:14%;clip-path:polygon(0 12%,8% 12%,10% 4%,18% 0,25% 4%,28% 12%,38% 12%,40% 4%,48% 0,55% 4%,58% 12%,70% 12%,72% 4%,80% 0,87% 4%,90% 12%,100% 12%,100% 100%,0 100%);box-shadow:inset 12px 10px 24px rgba(255,255,255,.18),inset -16px -16px 24px rgba(0,0,0,.08);transform:perspective(500px) rotateX(8deg)}
 .ghost-body:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.24),transparent 45%,rgba(255,255,255,.08));}
 @keyframes ghost-fall{0%{transform:translate3d(0,-15vh,0) rotate(var(--rot));}100%{transform:translate3d(var(--drift),115vh,0) rotate(calc(var(--rot) + 360deg));}}
 .center{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;width:410px;max-width:90vw}
 h1{margin:0 0 22px;color:white;font-size:76px;font-weight:1000;letter-spacing:-3px;text-shadow:0 1px 1px #c7a31c}
 form{display:flex;gap:6px;justify-content:center}.pin{height:56px;width:200px;border:0;border-radius:5px;background:#fff;font-size:24px;text-align:center;color:#555;outline:none;box-shadow:0 5px 0 rgba(0,0,0,.12)}.pin::placeholder{color:#777}.go{height:56px;width:60px;border:0;border-radius:5px;background:#fff;color:#555;font-size:32px;font-weight:bold;cursor:pointer;box-shadow:0 5px 0 rgba(0,0,0,.12)}
 </style></head><body><header><span>Blooket</span><span class="join">Join a Game</span><span class="login">Log In</span></header><main>
-<div class="ghost" style="--x:4%;--w:240px;--h:165px;--o:.8;--dur:13s;--delay:-2s;--rot:18deg;--drift:70px"><div class="ghost-body"></div></div>
-<div class="ghost" style="--x:22%;--w:210px;--h:145px;--o:.55;--dur:17s;--delay:-8s;--rot:-12deg;--drift:-55px"><div class="ghost-body"></div></div>
-<div class="ghost" style="--x:39%;--w:270px;--h:185px;--o:.45;--dur:19s;--delay:-12s;--rot:24deg;--drift:95px"><div class="ghost-body"></div></div>
-<div class="ghost" style="--x:61%;--w:230px;--h:160px;--o:.6;--dur:15s;--delay:-5s;--rot:-20deg;--drift:-80px"><div class="ghost-body"></div></div>
-<div class="ghost" style="--x:78%;--w:260px;--h:180px;--o:.7;--dur:18s;--delay:-11s;--rot:10deg;--drift:60px"><div class="ghost-body"></div></div>
-<div class="ghost" style="--x:93%;--w:190px;--h:135px;--o:.5;--dur:12s;--delay:-7s;--rot:-30deg;--drift:-40px"><div class="ghost-body"></div></div>
-<div class="ghost" style="--x:12%;--w:190px;--h:130px;--o:.4;--dur:21s;--delay:-15s;--rot:15deg;--drift:50px"><div class="ghost-body"></div></div>
-<div class="ghost" style="--x:50%;--w:220px;--h:150px;--o:.35;--dur:16s;--delay:-3s;--rot:-8deg;--drift:-70px"><div class="ghost-body"></div></div>
-<div class="ghost" style="--x:70%;--w:240px;--h:165px;--o:.45;--dur:20s;--delay:-17s;--rot:25deg;--drift:80px"><div class="ghost-body"></div></div>
+<div class="ghost" style="--x:4%;--w:210px;--h:220px;--o:.8;--dur:13s;--delay:-2s;--rot:18deg;--drift:70px"><div class="ghost-body"></div></div>
+<div class="ghost" style="--x:22%;--w:170px;--h:180px;--o:.55;--dur:17s;--delay:-8s;--rot:-12deg;--drift:-55px"><div class="ghost-body"></div></div>
+<div class="ghost" style="--x:39%;--w:240px;--h:250px;--o:.45;--dur:19s;--delay:-12s;--rot:24deg;--drift:95px"><div class="ghost-body"></div></div>
+<div class="ghost" style="--x:61%;--w:190px;--h:200px;--o:.6;--dur:15s;--delay:-5s;--rot:-20deg;--drift:-80px"><div class="ghost-body"></div></div>
+<div class="ghost" style="--x:78%;--w:230px;--h:240px;--o:.7;--dur:18s;--delay:-11s;--rot:10deg;--drift:60px"><div class="ghost-body"></div></div>
+<div class="ghost" style="--x:93%;--w:160px;--h:170px;--o:.5;--dur:12s;--delay:-7s;--rot:-30deg;--drift:-40px"><div class="ghost-body"></div></div>
+<div class="ghost" style="--x:12%;--w:150px;--h:160px;--o:.4;--dur:21s;--delay:-15s;--rot:15deg;--drift:50px"><div class="ghost-body"></div></div>
+<div class="ghost" style="--x:50%;--w:180px;--h:190px;--o:.35;--dur:16s;--delay:-3s;--rot:-8deg;--drift:-70px"><div class="ghost-body"></div></div>
+<div class="ghost" style="--x:70%;--w:200px;--h:210px;--o:.45;--dur:20s;--delay:-17s;--rot:25deg;--drift:80px"><div class="ghost-body"></div></div>
 
 <section class="center"><h1>Blooket</h1><form id="join"><input class="pin" id="pin" placeholder="Game ID" inputmode="numeric" aria-label="Game ID"><button class="go" type="submit">➜</button></form></section></main>
 <script>document.getElementById('join').addEventListener('submit',function(e){e.preventDefault();if(document.getElementById('pin').value.trim()==='5234'){let w=window.open('about:blank','_blank');if(w){w.document.title='';w.document.body.innerHTML='';}}});</script></body></html>
