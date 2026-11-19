@@ -4,9 +4,8 @@
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;font-family:Arial,Helvetica,sans-serif}
 header{height:32px;background:#8e2db2;color:#fff;display:flex;align-items:center;padding:0 12px;font-weight:800;font-size:20px;position:relative;z-index:5}
 header .join{position:absolute;left:50%;transform:translateX(-50%);font-size:20px}header .login{margin-left:auto;font-size:16px;text-decoration:underline}
-main{position:relative;width:100%;height:calc(100vh - 32px);overflow:hidden;background:#292929}
-main:before{content:"";position:absolute;inset:-20%;background-color:#292929;background-image:repeating-linear-gradient(0deg,transparent 0 34px,rgba(255,255,255,.025) 34px 35px),repeating-linear-gradient(90deg,transparent 0 34px,rgba(255,255,255,.025) 34px 35px);transform:rotate(20deg);background-size:70px 70px;opacity:.5}
-main:after{content:"";position:absolute;inset:-20%;background-image:repeating-linear-gradient(20deg,transparent 0 25px,rgba(255,255,255,.07) 25px 26px,transparent 26px 54px);transform:rotate(20deg)}
+main{position:relative;width:100%;height:calc(100vh - 32px);overflow:hidden;background:#292929 url("assets/background.png") center center / cover no-repeat}
+main:before,main:after{display:none}
 .float{position:absolute;width:var(--w);height:var(--w);left:var(--x);top:var(--y);background:rgba(235,235,235,.22);border-radius:18%;filter:blur(.2px);transform:rotate(var(--rot));animation:float var(--dur) ease-in-out var(--delay) infinite alternate;z-index:1}@keyframes float{to{transform:translate(var(--dx),var(--dy)) rotate(calc(var(--rot) + 18deg));background:rgba(245,245,245,.36)}}
 .center{position:absolute;z-index:3;left:50%;top:40%;transform:translate(-50%,-50%);text-align:center}
 h1{margin:0 0 14px;color:white;font-size:52px;font-weight:1000;letter-spacing:-2px;text-shadow:0 1px 1px #c7a31c}
